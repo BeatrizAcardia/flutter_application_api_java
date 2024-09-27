@@ -31,6 +31,7 @@ class _MinhalistaState extends State<Minhalista> {
   }
   @override
   Widget build(BuildContext context) {
+    fazerRequisicao();
     return Scaffold(
       appBar: AppBar(
         centerTitle: true, 
@@ -39,10 +40,10 @@ class _MinhalistaState extends State<Minhalista> {
       ),
       body: ListView.builder(
         itemCount: alRepo.listaAL.length,
-        itemBuilder: (context, inex){
+        itemBuilder: (context, index){
           return ListTile(
-            title: Text(alRepo.listaAL[inex].nome.toString()),
-            subtitle: Text(alRepo.listaAL[inex].ra.toString()),
+            title: Text(alRepo.listaAL[index].nome.toString()),
+            subtitle: Text(alRepo.listaAL[index].ra.toString()),
           );
         }  
         ),
